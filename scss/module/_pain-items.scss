@@ -1,0 +1,36 @@
+@use "../global" as *;
+
+.pain-category__items {
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: rem(100);
+    padding-left: rem(100);
+  }
+}
+
+.pain-item {
+  @include mq(md) {
+    width: calc(100% / 3 - #{rem(60)} * 2 / 3);
+  }
+}
+
+.pain-item:nth-child(n+2) {
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(60);
+  }
+}
+
+.pain-item:nth-child(3n+1) {
+  @include mq(md) {
+    margin-left: 0;
+  }
+}
+
+.pain-item:nth-child(n+4) {
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}

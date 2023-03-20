@@ -1,0 +1,64 @@
+@use "../global" as *;
+
+.contact {
+  position: relative;
+}
+
+.top-contact {
+  margin-top: rem(120);
+  @include mq(md) {
+    margin-top: rem(160);
+  }
+}
+
+.contact__inner {
+  @include mq(md) {
+    background-image: url(../img/top/top.contact_pc.jpg);
+    background-size: cover;
+  }
+}
+
+.contact-content__wrapper {
+  margin-top: rem(60);
+  @include mq(md) {
+    margin-top: 0;
+    padding-top: rem(99);
+    padding-bottom: rem(102);
+  }
+}
+
+.contact-text {
+  margin-top: rem(38);
+  @include mq(md) {
+    margin-top: rem(78);
+  }
+}
+
+.contact-btn {
+  margin-top: rem(65);
+  @include mq(md) {
+    margin-top: rem(81);
+  }
+}
+
+.contact-btn .btn {
+  @include mq(md) {
+    padding: rem(28) rem(112);
+  }
+}
+
+.contact-btn .btn .u-desktop::after {
+  @include mq(md) {
+    left: rem(174);
+  }
+}
+
+.contact-btn .btn span::before {
+  @include mq(md) {
+    right: rem(-160);
+  }
+}
+
+.contact-btn .btn span::after {
+  left: rem(132);
+}

@@ -1,0 +1,72 @@
+@use "../global" as *;
+
+//背景の〇
+
+.circle {
+  width: rem(725);
+  height: rem(725);
+  background-color: rgba($sub-color, 0.6);
+  position: absolute;
+  border-radius: rem(700);
+  z-index: -1;
+}
+
+.circle-1 {
+  top: rem(240);
+  left: rem(-550);
+  @include mq(md) {
+    top: rem(458);
+    left: rem(-170);
+  }
+}
+
+.circle-2 {
+  top: rem(-134);
+  right: rem(-504);
+  @include mq(md) {
+    top: rem(-362);
+    right: rem(-363);
+  }
+}
+
+.circle-3 {
+  top: rem(-89);
+  left: rem(-537);
+  @include mq(md) {
+    top: rem(-318);
+    left: rem(-353);
+  }
+}
+
+.circle-4 {
+  top: 0;
+  left: rem(-175);
+}
+
+//about-page
+.circle-about1,
+.circle-about2,
+.circle-about3 {
+  background-color: $sub-color;
+}
+
+.circle-about1 {
+  @include mq(md) {
+    top: rem(-118);
+    right: rem(-270);
+  }
+}
+
+.circle-about2 {
+  @include mq(md) {
+    top: rem(449);
+    left: rem(-270);
+  }
+}
+
+.circle-about3 {
+  @include mq(md) {
+    top: rem(543);
+    right: rem(-363);
+  }
+}

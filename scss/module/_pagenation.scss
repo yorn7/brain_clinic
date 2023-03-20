@@ -1,0 +1,89 @@
+@use "../global" as *;
+
+
+.pagenation-wrapper {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: rem(14);
+  line-height: calc(22 / 14);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(21 / 16);
+  }
+}
+
+.pagination span, .pagination a,
+.pagination a.prev, .pagination a.next{
+  display: block;
+  width: auto;
+  margin: rem(4);
+  border-radius: 10%;
+  background-color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: rem(14);
+  @include mq(md) {
+    margin: rem(6);
+    line-height: rem(16);
+  }
+}
+
+.pagination span, .pagination a {
+  border: 1px solid #DCDCDC;
+  padding: rem(8) rem(12);
+  @include mq(md) {
+    padding: rem(11) rem(15);
+  }
+}
+
+/*前へ,次へ,ドット*/
+.pagination a.prev, .pagination a.next,
+.pagination span.dot {
+  padding: rem(8) rem(12);
+  border: none;
+  @include mq(md) {
+    padding: rem(11) rem(15);
+  }
+}
+
+/* ページ番号 */
+.pagination .pager{
+  width: rem(32);
+  @include mq(md) {
+    width: rem(40);
+  }
+}
+
+/* ホバー時 & 現在のページ */
+.pagination a:hover,
+.pagination .current  {
+  color: $white;
+  background-color: $accent-color;
+}
+
+// /* 前へ */
+// .pagination a.prev {
+//   margin-right: 16px;
+// }
+// /* 次へ */
+// .pagination a.next {
+//   margin-left: 16px;
+// }
+/* 最初へ */
+.pagination a.first {}
+/* 最後へ */
+.pagination a.last {}
+
+/* Page x / y */
+.pagination span.page_num {
+  display: none;
+}

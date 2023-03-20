@@ -1,0 +1,52 @@
+@use "../global" as *;
+
+.page__title {
+  margin-top: rem(13);
+  @include mq(md) {
+    margin-top: rem(69);
+  }
+}
+
+.page-title__text {
+  text-align: center;
+  color: $white;
+  font-size: rem(60);
+  line-height: calc(80 / 60);
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: rem(114);
+  left: 48%;
+  transform: translateX(-50%);
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: calc(106 / 80);
+
+    top: rem(183);
+  }
+}
+
+.page-title__text span {
+  font-size: rem(16);
+  line-height: calc(21 / 16);
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: calc(32 / 24);
+  }
+}
+
+.page-mv__img {
+  width: 100%;
+  height: auto;
+}
+
+.page-mv__img img {
+  object-fit: cover;
+  //width: 100%;
+  //aspect-ratio: rem(375) / rem(220);
+  height: rem(220);
+  @include mq(md) {
+    height: rem(300);
+  }
+}

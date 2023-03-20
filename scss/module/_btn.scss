@@ -1,0 +1,181 @@
+@use "../global" as *;
+
+.btn__wrapper {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn {
+  position: relative;
+  font-size: rem(16);
+  line-height: calc(21 / 16);
+  display: inline-block;
+  text-align: center;
+  padding: rem(27) 0;
+  border: rem(1) solid $base-color;
+  min-width: rem(290);
+  
+  transition: ease .2s;
+  @include mq(md) {
+    font-size: rem(18);
+    line-height: calc(24 / 18);
+    padding: rem(28) 0;
+    min-width: rem(321);
+  }
+}
+
+.top__content-btn,
+.contact-btn {
+  @include mq(md) {
+    margin-right: rem(40);
+  }
+}
+
+.contact-btn .btn {
+  @include mq(md) {
+    padding: rem(28) 0;
+  }
+}
+
+.btn span {
+  position: relative;
+  z-index: 3;
+}
+
+.btn span::before,
+.btn span::after {
+  position: absolute;
+  content: '';
+  background-color: $base-color;
+}
+
+.btn span::before {
+  width: rem(14);
+  height: rem(1);
+  rotate: 48deg;
+  top: 33%;
+  right: rem(-92);
+  @include mq(md) {
+    width: rem(16);
+    rotate: 40deg;
+    top: 32%;
+    right: rem(-168);
+  }
+}
+
+.btn span::after {
+  width: rem(58);
+  height: rem(1);
+  top: 50%;
+  left: rem(112);
+  @include mq(md) {
+    width: rem(80);
+    left: rem(175);
+  }
+}
+
+.contact-btn .btn span::before {
+  top: 32%;
+  right: rem(-80);
+}
+
+.btn span.u-desktop::before {
+  @include mq(md) {
+    right: rem(-42);
+  }
+}
+
+.btn span.u-desktop::after {
+  @include mq(md) {
+    left: rem(279);
+  }
+}
+
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn:hover span {
+  color: $white;
+}
+
+.btn:hover span::before,
+.btn:hover span::after {
+  @include mq(md) {
+    transition: ease .2s;
+  }
+}
+
+.btn:hover span::before {
+  @include mq(md) {
+    right: rem(-186);
+  }
+}
+
+.btn:hover span::after {
+  @include mq(md) {
+    left: rem(194);
+  }
+}
+
+.btn:hover span.u-desktop::before {
+  @include mq(md) {
+    right: rem(-60);
+  }
+}
+
+.btn:hover span.u-desktop::after {
+  @include mq(md) {
+    left: rem(318);
+  }
+}
+
+.contact-btn .btn span.u-desktop::before {
+  @include mq(md) {
+    right: rem(-161);
+  }
+}
+
+.contact-btn .btn span.u-desktop::after {
+  @include mq(md) {
+    left: rem(185);
+  }
+}
+
+.contact-btn .btn:hover span.u-desktop::before {
+  @include mq(md) {
+    right: rem(-170);
+  }
+}
+
+.contact-btn .btn:hover span.u-desktop::after {
+  @include mq(md) {
+    left: rem(205);
+  }
+}
+
+
+/*== 背景が流れる（左から右） */
+.bgleft:before {
+  content: '';
+    /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+    /*色や形状*/
+  background: $accent-color;/*背景色*/
+  width: 100%;
+  height: 100%;
+    /*アニメーション*/
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before{
+  transform-origin:left top;
+  transform:scale(1, 1);
+}

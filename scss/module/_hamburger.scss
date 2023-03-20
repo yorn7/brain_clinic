@@ -1,0 +1,20 @@
+@use "../global" as *;
+
+.hamburger {
+  padding: rem(10);
+  margin: rem(-10);
+  top: 25%;
+}
+
+.hamburger span {
+  display: block;
+  width: rem(27);
+  height: rem(2);
+  background-color: $accent-color;
+  border-radius: rem(50);
+  transition: .3s;
+}
+
+.hamburger span:nth-child(2) {
+  margin: rem(4.8) 0;
+}

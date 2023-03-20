@@ -1,0 +1,16 @@
+@use "../global" as *;
+//page遷移仕様
+#feeling-section {
+  padding-top: rem(79);
+  margin-top: 0;
+  @include mq(md) {
+    padding-top: rem(146);
+    margin-top: 0;
+  }
+}
+
+// //ページ内仕様
+// .feeling-title__text {
+//   font-feature-settings: initial;
+//   // letter-spacing: rem(-1.5);
+// }

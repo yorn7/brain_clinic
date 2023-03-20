@@ -1,0 +1,25 @@
+@use "../global" as *;
+
+.page__headline {
+  margin-top: rem(9);
+  display: flex;
+  align-items: center;
+  font-size: rem(14);
+  line-height: calc(19 / 14);
+
+  color: $accent-color;
+  flex-wrap: nowrap;
+}
+
+.before-page {
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.page__headline span {
+  margin-left: rem(12);
+}
+
+.current-page {
+  margin-left: rem(8);
+}

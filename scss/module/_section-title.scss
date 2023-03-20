@@ -1,0 +1,47 @@
+@use "../global" as *;
+
+.section-title {
+  display: block;
+}
+
+.section-title__img {
+  object-fit: cover;
+}
+
+.section-title__img img {
+  width: 16.1%;
+  margin: 0 auto;
+  @include mq(md) {
+    aspect-ratio: rem(70) / rem(58);
+    width: rem(70);
+  }
+}
+
+.section-title__text {
+  text-align: center;
+  margin-top: rem(13);
+  @include mq(md) {
+    margin-top: rem(9);
+  }
+}
+
+.main__title {
+  font-size: rem(24);
+  line-height: calc(35 / 26);
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: calc(53 / 38);
+  }
+}
+
+.sub__title {
+  margin-top: rem(6);
+  font-size: rem(12);
+  line-height: calc(16 / 12);
+  display: block;
+  @include mq(md) {
+    margin-top: rem(8);
+    font-size: rem(16);
+    line-height: calc(21 / 16);
+  }
+}

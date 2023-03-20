@@ -1,0 +1,51 @@
+@use "../global" as *;
+
+.pain-category__img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.pain-category__img img {
+  margin: 0 auto;
+  width: rem(220);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+
+  transform: scale(1);
+  transition: .3s ease-in-out;
+  @include mq(md) {
+    width: rem(280);
+  }
+}
+
+.pain-category__text {
+  text-align: center;
+  margin-top: rem(24);
+  font-size: rem(16);
+  line-height: calc(21 / 16);
+  @include mq(md) {
+    margin-top: rem(19);
+    font-size: rem(24);
+    line-height: calc(32 / 24);
+  }
+}
+
+.pain-item a:hover .pain-category__img img {
+  transform: scale(1.2);
+}
+
+.mask {
+  display: block;
+  width: rem(220);
+  height: rem(220);
+  line-height: 0;
+  overflow: hidden;
+
+  margin: 0 auto;
+  border-radius: 50%;
+  @include mq(md) {
+    width: rem(280);
+    height: rem(280);
+  }
+}

@@ -1,0 +1,84 @@
+@use "../global" as *;
+
+.director-introduction {
+  background-color: $white;
+  padding: rem(60) rem(20);
+  box-shadow: rem(2) rem(2) rem(6) rgba($black, 0.05);
+  margin-top: rem(-48);
+  margin-right: rem(20);
+  position: absolute;
+  font-size: rem(13);
+  line-height: calc(19 / 13);
+  @include mq(md) {
+    padding: rem(80) rem(40);
+    position: static;
+    margin-right: 0;
+    font-size: rem(24);
+    line-height: calc(32 / 24);
+  }
+}
+
+.introduction__text-wrapper {
+  @include mq(md) {
+    font-feature-settings: "palt";
+    letter-spacing: rem(-1);
+  }
+}
+
+.introduction__text:nth-child(n+2) {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.introduction__text-wrapper2 {
+  margin-top: rem(33);
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}
+
+p.introduction__text.text4 {
+  @include mq(md) {
+    margin-top: rem(5);
+  }
+}
+
+.introduction__title {
+  font-size: rem(20);
+  line-height: calc(27 / 20);
+  font-weight: 550;
+  @include mq(md) {
+    font-size: rem(30);
+    line-height: calc(40 / 30);
+  }
+}
+
+
+.director__name-wrapper {
+  margin-top: rem(107);
+  text-align: right;
+  @include mq(md) {
+    margin-top: rem(118);
+  }
+}
+
+.clinic__name {
+  font-size: rem(14);
+  line-height: calc(19 / 14);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(21 / 16);
+  }
+}
+
+.director__name {
+  width: rem(100);
+  margin: 0 0 0 auto;
+  margin-top: rem(6);
+  @include mq(md) {
+    width: rem(166);
+    margin-top: rem(8);
+  }
+}

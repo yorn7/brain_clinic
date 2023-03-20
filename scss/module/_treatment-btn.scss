@@ -1,0 +1,28 @@
+@use "../global" as *;
+
+.treatment-btn__wrapper {
+  text-align: center;
+  margin: 0 auto;
+  @include mq(md) {
+    text-align: initial;
+    margin: 0;
+  }
+}
+
+.treatment-btn {
+  font-size: rem(16);
+  line-height: calc(21 / 16);
+  padding: rem(26) rem(50) rem(29) rem(50);
+  background-color: $accent-color;
+  color: $white;
+  display: inline-block;
+  min-width: rem(290);
+  text-align: center;
+  border: rem(1) solid $accent-color;
+  @include mq(md) {
+    font-size: rem(18);
+    line-height: calc(24 / 18);
+    padding: rem(28) rem(50);
+    min-width: rem(320);
+  }
+}

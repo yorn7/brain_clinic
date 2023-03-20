@@ -1,0 +1,70 @@
+@use "../global" as *;
+
+.form-item {
+  font-size: rem(16);
+  line-height: calc(21 / 16);
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.form-item:nth-of-type(n+2) {
+  margin-top: rem(38);
+  @include mq(md) {
+    margin-top: rem(27);
+  }
+}
+
+.form__label-area {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.form-textarea {
+  @include mq(md) {
+    align-items: flex-start;
+    padding-top: rem(14);
+  }
+}
+
+.form__require {
+  padding: rem(5) rem(6) 0 rem(6);
+  color: #FF7979;
+  background-color: $white;
+  border: rem(1) solid #FF7979;
+  display: inline-block;
+
+  margin-left: rem(16);
+}
+
+.form-item input {
+  width: rem(335);
+  height: rem(50);
+  background-color: $white;
+
+  margin-top: rem(14);
+  padding: rem(14) rem(10) rem(15) rem(18);
+  @include mq(md) {
+    width: rem(500);
+  }
+}
+
+.form-item textarea {
+  width: rem(335);
+  height: rem(217);
+  background-color: $white;
+
+  margin-top: rem(12);
+  padding: rem(14) rem(10) rem(15) rem(18);
+  @include mq(md) {
+    width: rem(500);
+  }
+}
+
+.form-item input::placeholder,
+.form-item textarea::placeholder {
+  color: #AFAFAF;
+  font-size: rem(16);
+  line-height: calc(21 / 16);
+}

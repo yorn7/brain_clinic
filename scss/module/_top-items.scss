@@ -1,0 +1,121 @@
+@use "../global" as *;
+
+.top-items {
+  margin: 0 auto;
+  @include mq(md) {
+    display: flex;
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: rem(strip-unit($padding-pc));
+    padding-left: rem(strip-unit($padding-pc));
+  }
+}
+
+.top-items__img {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    width: 50%;
+    flex-direction: row;
+  }
+}
+
+.top-img1 img,
+.top-img2 img {
+  box-shadow: 0 rem(4) rem(10) rgba(0,0,0,0.16);
+  width: 84%;
+  //height: rem(217);
+  object-fit: cover;
+  @include mq(md) {
+    width: rem(400);
+    height: rem(647);
+  }
+}
+
+
+
+.top__items-title {
+  margin-top: rem(60);
+  @include mq(md) {
+    margin-top: rem(85);
+  }
+}
+
+.top__content-items {
+  text-align: center;
+  padding-right: rem(strip-unit($padding-sp));
+  padding-left: rem(strip-unit($padding-sp));
+}
+
+.top__content-wrapper {
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+.top__content-title {
+  margin-top: rem(38);
+  font-size: rem(20);
+  line-height: calc(27 / 20);
+  @include mq(md) {
+    margin-top: rem(78);
+    font-size: rem(24);
+    line-height: calc(32 / 24);
+  }
+}
+
+.top-treatment__content .top__content-title {
+  margin-top: rem(39);
+  @include mq(md) {
+    margin-top: rem(77);
+  }
+}
+
+.section-title__text {
+  margin-top: rem(6);
+}
+
+.top__content-text {
+  margin-top: rem(36);
+  font-size: rem(14);
+  line-height: calc(19 / 14);
+  @include mq(md) {
+    margin-top: rem(32);
+    font-size: rem(18);
+    line-height: calc(24 / 18);
+  }
+}
+
+.top-about__content .top__content-text {
+  margin-top: rem(34);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.top-treatment__content .top__content-text {
+  margin-top: rem(42);
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.top__content-btn {
+  margin-top: rem(68);
+  @include mq(md) {
+    margin-top: rem(72);
+  }
+}
+
+.top-treatment__content .top__content-btn {
+  margin-top: rem(70);
+  @include mq(md) {
+    margin-top: rem(91);
+  }
+}
+
+.top-about__content .top__content-btn {
+  margin-top: rem(72);
+  @include mq(md) {
+    margin-top: rem(89);
+  }
+}

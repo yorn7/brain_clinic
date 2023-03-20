@@ -1,0 +1,25 @@
+@use "../global" as *;
+
+.news-lists__item:nth-child(n+2) a {
+  margin-top: rem(32);
+  padding-bottom: rem(19);
+  @include mq(md) {
+    margin-top: rem(42);
+    padding-bottom: rem(37);
+  }
+}
+
+.news-lists__item:last-child a {
+  border-bottom: none;
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(41);
+  }
+}
+
+.news-lists__item:first-child a {
+  padding-bottom: rem(60);
+  @include mq(md) {
+    padding-bottom: rem(60);
+  }
+}

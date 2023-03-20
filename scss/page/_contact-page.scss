@@ -1,0 +1,82 @@
+@use "../global" as *;
+
+.contact-page__inner {
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-bottom: rem(200);
+  }
+}
+
+.contact-page__title .section-title__img img {
+  width: 20.1%;
+  @include mq(md) {
+    width: 5%;
+  }
+}
+
+.contact-page__title {
+  margin-top: rem(44);
+  @include mq(md) {
+    margin-top: rem(128);
+  }
+}
+
+.contact-page__title .main__title {
+  @include mq(md) {
+    font-size: rem(28);
+  }
+}
+
+.section-title__content {
+  margin-top: rem(36);
+  font-size: rem(16);
+  line-height: calc(21 / 16);
+  @include mq(md) {
+    margin-top: rem(33);
+  }
+}
+
+.contact-page__form {
+  margin-top: rem(93);
+  background-color: $sub-color;
+  margin-right: rem(-20);
+  margin-left: rem(-20);
+  padding-left: rem(20);
+  padding-right: rem(20);
+  padding-bottom: rem(100);
+  @include mq(md) {
+    max-width: rem(1000);
+    margin: 0 auto;
+    margin-top: rem(124);
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: rem(122);
+  }
+}
+
+.form__items {
+  padding-top: rem(16);
+  @include mq(md) {
+    max-width: rem(752);
+    margin: 0 auto;
+    padding-top: rem(81);
+  }
+}
+
+.form__item-text {
+  margin-top: rem(30);
+  font-size: rem(14);
+  line-height: calc(19 / 14);
+  text-align: center;
+}
+
+.contact-page__btn {
+  margin-top: rem(61);
+  @include mq(md) {
+    margin-top: rem(64);
+  }
+}
+
+.contact__btn {
+    text-align: center;
+}

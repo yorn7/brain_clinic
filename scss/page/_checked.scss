@@ -1,0 +1,26 @@
+@use "../global" as *;
+//page遷移仕様
+#checked-section {
+  padding-top: rem(81);
+  margin-top: 0;
+  @include mq(md) {
+    padding-top: rem(153);
+    margin-top: 0;
+  }
+}
+
+//ページ内仕様
+.checked {
+  padding-bottom: rem(95);
+  @include mq(md) {
+    padding-bottom: rem(192);
+  }
+}
+
+// .checked-title__text {
+//   letter-spacing: 0;
+// }
+
+// .checked-text {
+//   letter-spacing: rem(-0.8);
+// }

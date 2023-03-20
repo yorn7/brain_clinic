@@ -1,0 +1,15 @@
+@use "../global" as *;
+
+.done-page__inner {
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-bottom: rem(200);
+  }
+}
+
+.contact-home {
+  margin-top: rem(114);
+  @include mq(md) {
+    margin-top: rem(84);
+  }
+}

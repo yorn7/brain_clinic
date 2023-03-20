@@ -1,0 +1,48 @@
+@use "../global" as *;
+
+.about {
+  position: relative;
+}
+
+.top-about {
+  margin-top: rem(120);
+  @include mq(md) {
+    margin-top: rem(160);
+  }
+}
+
+.about__inner {
+  @include mq(md) {
+    flex-direction: row-reverse;
+  }
+}
+
+.about-img {
+  flex-direction: column-reverse;
+  @include mq(md) {
+    flex-direction: row-reverse;
+  }
+}
+
+.about-img__person {
+  z-index: 2;
+  margin-top: rem(-67);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(-40);
+  }
+}
+
+.about-img__other {
+  z-index: 1;
+  @include mq(md) {
+    margin-top: rem(56);
+  }
+}
+
+.about-img__other img {
+  margin: 0 0 0 auto;
+  @include mq(md) {
+    margin: 0;
+  }
+}
